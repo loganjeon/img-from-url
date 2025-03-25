@@ -15,6 +15,9 @@ This Python script crawls and downloads product images from a given web URL. It 
 
 1. You need Python 3.6 or higher installed.
 2. Install the required libraries:
+    ```bash
+    pip install requests beautifulsoup4 selenium webdriver-manager Pillow
+    ```
 3. Chrome browser must be installed (WebDriver will be installed automatically).
 4. Clone this repository or download the `product_image_crawler.py` file.
 
@@ -22,12 +25,18 @@ This Python script crawls and downloads product images from a given web URL. It 
 
 1. Open a terminal or command prompt and navigate to the directory containing the script.
 2. Run the script with the following command:
+    ```bash
+    python product_image_crawler.py URL -o OUTPUT_FOLDER -W MIN_WIDTH -H MIN_HEIGHT 
+    ```
 
-- `[URL]`: URL of the webpage to crawl (required)
-- `[OUTPUT_FOLDER]`: Folder to save images (optional, default: 'product_images')
-- `[MIN_WIDTH]`: Minimum width of images to download (optional, default: 0)
-- `[MIN_HEIGHT]`: Minimum height of images to download (optional, default: 0)
+    - `[URL]`: URL of the webpage to crawl (required)
+    - `[OUTPUT_FOLDER]`: Folder to save images (optional, default: 'product_images')
+    - `[MIN_WIDTH]`: Minimum width of images to download (optional, default: 0)
+    - `[MIN_HEIGHT]`: Minimum height of images to download (optional, default: 0)
 3. Example:
+    ```bash
+    python product_image_crawler.py https://www.11st.co.kr/products/7979691169 -o my_images -W 300 -H 300
+    ```
 4. When the script runs, it will create the specified output folder and save the downloaded images there.
 
 ## Command Line Options
@@ -60,6 +69,3 @@ This project is distributed under the MIT License. See the `LICENSE` file for de
 
 ## Contributions
 Bug reports, feature requests, pull requests, and all other forms of contribution are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-
-# img-from-url
